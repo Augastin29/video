@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>chatapp</title>
+</head>
+
+<body>
+    <div id="room-container">
+    <% Object.keys(rooms).forEach(room=>{%>
+    <div><%= room %> </div>
+    <a href="/<%= room %>">jion</a>
+<% }) %>
+</div>
+<form action="/room" method="post">
+    <input type="text" name="room" required>
+    <button type='submit'>newroom</button>
+</form>
+
+    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script src="./func.js"></script>
+</body>
+</html>

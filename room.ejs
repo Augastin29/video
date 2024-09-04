@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>chatapp</title>
+<style>
+    video {
+      width: 300px;
+      height: 200px;
+      margin: 5px;
+    }
+</style>
+
+</head>
+
+<body>
+    <script>
+        const roomName = '<%= roomName %>'
+    </script>
+     <video id="localVideo" autoplay muted></video>
+     <video id="remoteVideo" autoplay></video>
+    <div id="message-container"></div>
+    <form id="sent-container">
+       
+        <input type="text" id="message-input">
+        <button type='button' id="sent-button">send</button>
+    </form>
+
+    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script src="./func.js"></script>
+
+
+
+
+</body>
+
+</html>
